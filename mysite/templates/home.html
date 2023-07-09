@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}
+Search Engine
+{% endblock %}
+{% block body %}
+    
+    {% load static %}
+    
+  <div class="container text-center my-4">
+      <h1 class="text-center">Search a Dish</h1>
+  <br>
+      <form action="/" method="post">
+          {% csrf_token %}
+          {{form}}
+          
+          <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+  </div>
+   
+         
+        
+        
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    {% endblock %}

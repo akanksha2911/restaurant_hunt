@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}
+About
+{% endblock %}
+{% block body %}
+    <div class="container text-center my-4">
+    <h1> "{{info.name}}" Restaurant Information </h1>
+    <p><i>All you need to know about the restaurant </i></p>
+    </div>
+<div class="container my-4">
+<p class="mh-100" style="width: 1000px; height: 25px; font-size:18px"><strong>Address: </strong> {{info.location.address}}</p>
+<p class="mh-100" style="width: 1000px; height: 25px; font-size:18px"><strong>Locality: </strong>{{info.location.locality}}</p>
+<p class="mh-100" style="width: 1000px; height: 25px; font-size:18px"><strong>Cuisines: </strong>{{ info.cuisines}}</p>
+<p class="mh-100" style="width: 1000px; height: 25px; font-size:18px"><strong>Votes: </strong>{{info.user_rating.votes}}</p>
+<p class="mh-100" style="width: 1000px; height: 25px; font-size:18px"><strong>Rating: </strong>{{info.user_rating.rating_text}}</p>
+<p class="mh-100" style="width: 1000px; height: 25px; font-size:18px"><strong>Online Delievery: </strong>{{info.has_online_delivery}}</p>
+<p class="mh-100" style="width: 1000px; height: 25px; font-size:18px"><strong>Table Booking: </strong>{{info.has_table_booking}}</p>
+<p class="mh-100" style="width: 1000px; height: 25px; font-size:18px"><strong>Average Cost For Two: </strong>{{info.average_cost_for_two}}</p>
+
+</div>
+  {% endblock %}

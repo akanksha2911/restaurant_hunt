@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}
+Result
+{% endblock %}
+{% block body %}
+    <div class="container text-center table-hover">
+    <h1> Restaurants name where dish is available </h1>
+    <p>To know about the restaurant and options available click on the restaurant name</p>
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+        <tr>
+          <th>Restaurant Name</th>
+          <th>Price of Dish</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for restaurant,price in restaurants.items %}
+        <tr>
+          <td><a href="about/{{restaurant}}"> {{ restaurant }}</a></td>
+          <td> {{ price }}</td>
+        </tr> 
+        {% empty %}
+        <p> No restaurants available for the dish. Please search other dish.</p>
+        {% endfor %}
+    </tbody>
+        </table>
+      
+
+</div>
+  {% endblock %}
